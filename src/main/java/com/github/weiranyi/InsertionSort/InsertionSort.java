@@ -14,12 +14,8 @@ public class InsertionSort {
         for (int i = 0; i < arr.length; i++) {
             // 将arr[i]插入到合适的位置
             // j-1要存在，j-1>0;将指针向前移，j--
-            for (int j = i; j - 1 >= 0; j--) {
-                if (arr[j].compareTo(arr[j - 1]) < 0) {
-                    swap(arr, j, j - 1);
-                } else {
-                    break;
-                }
+            for (int j = i; j - 1 >= 0 && arr[j].compareTo(arr[j - 1]) < 0; j--) {
+                swap(arr, j, j - 1);
             }
         }
     }
