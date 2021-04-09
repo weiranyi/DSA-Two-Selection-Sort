@@ -9,17 +9,11 @@ import org.junit.jupiter.api.Test;
 public class SmokeTest {
     @Test
     public void test() {
-        int n = 10000;
-        Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
-        long startTime = System.nanoTime();
-        SelectionSort.sort(arr);
-        long endTime = System.nanoTime();
-        double time = (endTime - startTime) / 1000000000.0;
-        if (!SortingHelper.isSorted(arr)) {
-            throw new RuntimeException("选择排序算法失败！！！");
+        int[] dataSize = {10000, 100000};
+        for (int n : dataSize) {
+            Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
+            SortingHelper.sortTest("SelectionSort", arr);
         }
-        System.out.println("对于" + n + "个数据" + ",耗时：" + time + "s" + ";");
-
 
         Student[] students = {new Student("亦蔚然1", 95),
                 new Student("亦蔚然2", 90),
