@@ -1,5 +1,7 @@
 package com.github.weiranyi.SelectionSort;
 
+import com.github.weiranyi.InsertionSort.InsertionSort;
+
 /**
  * @author: https://github.com/weiranyi
  * @description 检查排序结果是否正常
@@ -26,6 +28,8 @@ public class SortingHelper {
         // 可以用反射机制
         if (sortname.equals("SelectionSort")) {
             SelectionSort.sort(arr);
+        } else if (sortname.equals("InsertionSort")) {
+            InsertionSort.sort(arr);
         }
         long endTime = System.nanoTime();
 

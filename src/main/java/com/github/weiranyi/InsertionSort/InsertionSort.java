@@ -16,13 +16,14 @@ public class InsertionSort {
             // j-1要存在，j-1>0;将指针向前移，j--
             for (int j = i; j - 1 >= 0; j--) {
                 if (arr[j].compareTo(arr[j - 1]) < 0) {
-                    swap(arr,j,j-1);
-                }else {
+                    swap(arr, j, j - 1);
+                } else {
                     break;
                 }
             }
         }
     }
+
     private static <E> void swap(E[] arr, int i, int j) {
         E swap = arr[i];
         arr[i] = arr[j];

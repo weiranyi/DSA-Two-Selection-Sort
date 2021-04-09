@@ -14,6 +14,11 @@ public class SmokeTest {
             Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
             SortingHelper.sortTest("SelectionSort", arr);
         }
+        for (int n : dataSize) {
+            Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
+            SortingHelper.sortTest("InsertionSort", arr);
+        }
+
 
         Student[] students = {new Student("亦蔚然1", 95),
                 new Student("亦蔚然2", 90),
