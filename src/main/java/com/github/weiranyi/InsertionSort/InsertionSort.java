@@ -26,4 +26,16 @@ public class InsertionSort {
         arr[j] = swap;
     }
 
+    // 优化后的插入排序法更快，少了寻址操作，但仅仅是常熟级的优化【不是算法的主要关注点】
+    public static <E extends Comparable<E>> void sortOptimize(E[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            // 将arr[i]插入到合适的位置
+            E temp = arr[i]; //暂存
+            int j; // 指针
+            for (j = i; j - 1 >= 0 && temp.compareTo(arr[j - 1]) < 0; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[j] = temp;
+        }
+    }
 }

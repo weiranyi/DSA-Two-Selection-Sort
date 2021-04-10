@@ -30,6 +30,8 @@ public class SortingHelper {
             SelectionSort.sort(arr);
         } else if (sortname.equals("InsertionSort")) {
             InsertionSort.sort(arr);
+        } else if (sortname.equals("InsertionSortOptimize")) {
+            InsertionSort.sortOptimize(arr);
         }
         long endTime = System.nanoTime();
 
